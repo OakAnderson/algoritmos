@@ -7,7 +7,7 @@ package sort
 
 import "fmt"
 
-func BubbleSort(arr []int, simulation ...bool) []int {
+func BubbleSort(arr []int, simulation bool) []int {
 	swap := func(i, j int) {
 		arr[i], arr[j] = arr[j], arr[i]
 	}
@@ -16,9 +16,7 @@ func BubbleSort(arr []int, simulation ...bool) []int {
 	swapped := true
 
 	iteration := 0
-	sim := false
-	if len(simulation) > 0 && simulation[0] {
-		sim = true
+	if simulation {
 		fmt.Println("iteração", iteration, ":", arr)
 	}
 
@@ -28,7 +26,7 @@ func BubbleSort(arr []int, simulation ...bool) []int {
 			if arr[i-1] > arr[i] {
 				swap(i-1, i)
 				swapped = true
-				if sim {
+				if simulation {
 					iteration++
 					fmt.Println("iteração", iteration, ":", arr)
 				}
