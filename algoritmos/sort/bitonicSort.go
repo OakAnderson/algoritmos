@@ -1,6 +1,6 @@
 // https://en.wikipedia.org/wiki/Bitonic_sorter
 //
-// Biotonic sort é um algoritmo de ordenação que usa multiprocessos
+// Bitonic sort é um algoritmo de ordenação que usa multiprocessos
 // Este algoritmo só pode ordenar listas com tamanho em potência de 2
 //
 // Performace no pior caso em paralelo: O(log(n)²)
@@ -20,19 +20,19 @@ func compare(arr []int, reverse bool) []int {
 	return arr
 }
 
-func biotonicMerge(arr []int, reverse bool) []int {
+func bitonicMerge(arr []int, reverse bool) []int {
 	n := len(arr)
 	if n <= 1 {
 		return arr
 	}
 	arr = compare(arr, reverse)
-	left := biotonicMerge(arr[:n/2], reverse)
-	right := biotonicMerge(arr[n/2:], reverse)
+	left := bitonicMerge(arr[:n/2], reverse)
+	right := bitonicMerge(arr[n/2:], reverse)
 
 	return append(left, right...)
 }
 
-func BiotonicSort(arr []int, reverse bool) ([]int, error) {
+func BitonicSort(arr []int, reverse bool) ([]int, error) {
 	n := len(arr)
 	if n <= 1 {
 		return arr, nil
@@ -41,8 +41,8 @@ func BiotonicSort(arr []int, reverse bool) ([]int, error) {
 	if !(n&(n-1) == 0) {
 		return nil, errors.New("O tamanho da lista deve ser potência de 2")
 	}
-	left, _ := BiotonicSort(arr[:n/2], true)
-	right, _ := BiotonicSort(arr[n/2:], false)
+	left, _ := BitonicSort(arr[:n/2], true)
+	right, _ := BitonicSort(arr[n/2:], false)
 
-	return biotonicMerge(append(left, right...), reverse), nil
+	return bitonicMerge(append(left, right...), reverse), nil
 }
