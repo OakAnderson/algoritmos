@@ -34,8 +34,8 @@ func DecimalToBinaryIP(ip string) string {
 	var binIP []string
 	for i := 0; i < 4; i++ {
 		v, _ := strconv.Atoi(numIP[i])
-		binIP = append(binIP, DecimalToBinary(v), ".")
+		binIP = append(binIP, DecimalToBinary(v))
 	}
 
-	return strings.Join(binIP[:7], "")
+	return strings.Join(binIP, ".")
 }
