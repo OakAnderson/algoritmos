@@ -9,7 +9,7 @@ Você pode testar criando um arquivo go: (Ex: uso de `BubbleSort` em `sort`)
 package main
 
 import (
-    "gitlab.com/OakAnderson/algoritmos/algoritmos/sort"
+    "github.com/OakAnderson/algoritmos/algoritmos/sort"
 )
 
 func main() {
