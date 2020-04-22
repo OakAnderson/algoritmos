@@ -9,13 +9,14 @@ Você pode testar criando um arquivo go: (Ex: uso de `BubbleSort` em `sort`)
 package main
 
 import (
+    "fmt"
     "github.com/OakAnderson/algoritmos/algoritmos/sort"
 )
 
 func main() {
     myList := []int{1, 8, 3, 5, 6}
-    myList = sort.BubbleSort(myList)
-    print(myList)
+    myList = sort.BubbleSort(myList, true)
+    fmt.Println(myList)
 }
 ```
 
