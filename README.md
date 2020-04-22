@@ -22,6 +22,8 @@ func main() {
 
 ## List of Implementations
 
+- [math](algoritmos/math)
+    - [DecimalToBinaryIP](algoritmos/math/decimalToBinaryIP.go)
 - [sort](algoritmos/sort)
     - [BitonicSort](algoritmos/sort/bitonicSort.go)
     - [BitonicSortMultiprocess](algoritmos/sort/bitonicSortMultiprocess.go)
