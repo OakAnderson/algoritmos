@@ -1,4 +1,5 @@
-// https://en.wikipedia.org/wiki/Bubble_sort
+// https://pt.wikipedia.org/wiki/Bubble_sort
+//
 // Performace no pior caso: O(n²)
 // Chamando BubbleSort(arr, true) será possível observar os processos de
 // ordenação
