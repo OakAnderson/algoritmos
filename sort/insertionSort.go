@@ -4,14 +4,7 @@
 // Performace no pior caso:     O(n²)
 package sort
 
-import "fmt"
-
-func InsertionSort(arr []int, simulation bool) []int {
-	iteration := 0
-	if simulation {
-		fmt.Printf("iteração %d : %v\n", iteration, arr)
-	}
-
+func InsertionSort(arr []int) []int {
 	for i := 0; i < len(arr); i++ {
 		cursor := arr[i]
 		pos := i
@@ -21,11 +14,6 @@ func InsertionSort(arr []int, simulation bool) []int {
 			pos--
 		}
 		arr[pos] = cursor
-
-		if simulation {
-			iteration++
-			fmt.Printf("iteração %d : %v\n", iteration, arr)
-		}
 	}
 
 	return arr
