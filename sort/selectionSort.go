@@ -6,7 +6,7 @@
 package sort
 
 
-func SelectionSort(arr []int, simulation bool) []int {
+func SelectionSort(arr []int) []int {
     for i := range arr {
         menorIdx := i
         for prox := i+1; prox < len(arr); prox++ {
