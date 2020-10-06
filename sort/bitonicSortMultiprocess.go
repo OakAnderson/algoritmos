@@ -4,7 +4,7 @@
 // Este algoritmo só pode ordenar listas com tamanho em potência de 2
 //
 // Performace no pior caso em paralelo: O(log(n)²)
-// Performace no pior caso sem paralelamento: O(nlog(n)²)
+// Performace no pior caso sem paralelismo: O(nlog(n)²)
 package sort
 
 import (

@@ -18,7 +18,7 @@ func InsertionSort(arr []int, simulation bool) []int {
 
 		for pos > 0 && arr[pos-1] > cursor {
 			arr[pos] = arr[pos-1]
-			pos = pos - 1
+			pos--
 		}
 		arr[pos] = cursor
 
